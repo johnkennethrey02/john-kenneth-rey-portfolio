@@ -8,7 +8,7 @@ export const skillCategories = [
   {
     title: 'Programming',
     icon: 'code',
-    skills: ['Java', 'JavaScript'],
+    skills: ['Java', 'JavaScript', 'PHP'],
   },
   {
     title: 'Web Development',
