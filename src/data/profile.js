@@ -19,7 +19,7 @@ export const profile = {
     paragraphs: [
       'I’m an Information Technology student at Bulacan State University – Sarmiento Campus, and a Dean’s Lister for three consecutive years. My interests are in technical support, systems administration, software testing, and system monitoring and maintenance.',
       'For our capstone, ForgeCast — a point-of-sale and inventory management system with sales prediction for a hardware business — I served as Project Manager. I coordinated our five-member team, acted as the link between the client and the developers, and produced the system design documentation, including process flows, data flow diagrams, and use case diagrams.',
-      'In a separate systems administration project, I built a Windows Server 2022 domain environment in VirtualBox: I set up Active Directory and DNS, joined five department workstations to the domain, organized users into OUs and security groups, applied Group Policies, and secured department shared folders with share and NTFS permissions. I’ve also built CRUD applications using PHP with MySQL, and Java.',
+      'In a separate systems administration project, I built a Windows Server 2022 domain environment in VirtualBox: I set up Active Directory and DNS, joined five department workstations to the domain, organized users into OUs and security groups, applied Group Policies, and secured department shared folders with share and NTFS permissions. I’ve also built a JavaScript e-commerce store and a Java desktop CRUD application.',
     ],
     facts: [
       { icon: 'education', label: 'Education', value: 'BS Information Technology', detail: 'BulSU – Sarmiento Campus · 2023 – Present' },

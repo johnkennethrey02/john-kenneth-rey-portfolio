@@ -1,6 +1,7 @@
 /**
  * Portfolio projects.
- * - `links.code`: paste a GitHub URL here when the repo is public (null = "coming soon").
+ * - `links.code`: GitHub repo URL → shows a "Source code" button (null = hidden).
+ * - `links.demo`: live website URL → shows a "Live demo" button (optional).
  * - `images`: shown in the card and in the full-screen viewer. Empty = designed placeholder.
  * - `featured: true` renders the project as the large card at the top.
  */
@@ -60,22 +61,23 @@ export const projects = [
     ],
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'XAMPP', 'Agile', 'SVC'],
     images: [
-      { src: fcDashboard, alt: 'Manager dashboard with sales trend, forecast, quick actions, and stock alerts' },
+      // Ordered like the real user flow: sign in → manager screens (sidebar order) → cashier screens
       { src: fcLogin, alt: 'Sign-in page' },
-      { src: fcPos, alt: 'Point of Sale with retail and wholesale modes and Cash, GCash, or Card payment' },
-      { src: fcProducts, alt: 'Product management with search, filters, and status overview' },
-      { src: fcAddProduct, alt: 'Add Product form with a live pricing preview' },
-      { src: fcImport, alt: 'Bulk product import using a CSV template' },
-      { src: fcStock, alt: 'Stock monitoring with restock levels and stock status' },
-      { src: fcCategories, alt: 'Category management' },
-      { src: fcPurchaseOrders, alt: 'Purchase order management' },
-      { src: fcStockReceiving, alt: 'Stock receiving for submitted purchase orders' },
-      { src: fcMovements, alt: 'Inventory movement log for sales, returns, and stock adjustments' },
-      { src: fcTransactions, alt: 'Cashier transaction history for retail, wholesale, and returns' },
-      { src: fcReturns, alt: 'Product returns by receipt number' },
-      { src: fcFinancial, alt: 'Financial report with income statement: gross sales, returns, cost of goods sold, and net income' },
-      { src: fcReturnReports, alt: 'Return report with restock status' },
-      { src: fcExpenses, alt: 'Expense recording and monitoring' },
+      { src: fcDashboard, alt: 'Manager dashboard with sales trend, forecast, quick actions, and stock alerts' },
+      { src: fcProducts, alt: 'Inventory › Products: product management with search, filters, and status overview' },
+      { src: fcAddProduct, alt: 'Inventory › Products: Add Product form with a live pricing preview' },
+      { src: fcImport, alt: 'Inventory › Products: bulk import using a CSV template' },
+      { src: fcStock, alt: 'Inventory › Stock: stock monitoring with restock levels and stock status' },
+      { src: fcCategories, alt: 'Inventory › Categories: category management' },
+      { src: fcPurchaseOrders, alt: 'Purchase Orders: purchase order management' },
+      { src: fcStockReceiving, alt: 'Stock Receiving: receiving stock for submitted purchase orders' },
+      { src: fcMovements, alt: 'Movements: inventory log for sales, returns, and stock adjustments' },
+      { src: fcReturnReports, alt: 'Reports › Returns: return report with restock status' },
+      { src: fcFinancial, alt: 'Reports › Financial: income statement with gross sales, returns, cost of goods sold, and net income' },
+      { src: fcExpenses, alt: 'Expenses: expense recording and monitoring' },
+      { src: fcPos, alt: 'Cashier › Point of Sale: retail and wholesale modes with Cash, GCash, or Card payment' },
+      { src: fcTransactions, alt: 'Cashier › Transactions: history for retail, wholesale, and returns' },
+      { src: fcReturns, alt: 'Cashier › Returns: product returns by receipt number' },
     ],
     links: { code: null },
   },
@@ -113,15 +115,15 @@ export const projects = [
     subtitle: 'E-commerce Clothing System',
     label: 'Web Development',
     description:
-      'An e-commerce clothing system that covers the shopping flow from browsing products to checkout, with an order history and a trash for removed transactions.',
+      'A front-end e-commerce clothing store built with vanilla JavaScript that covers the shopping flow from browsing products to checkout, with an order history and a trash for removed transactions.',
     highlights: [
-      'Product catalog with search and add-to-cart.',
+      'Product catalog with live search and search suggestions.',
       'Cart with quantity controls, order cancellation, and a running total.',
-      'Checkout that saves orders to a purchase history.',
-      'Trash for cancelled orders, with restore and permanent delete.',
-      'CRUD operations backed by a MySQL database.',
+      'Checkout that saves each order as a receipt in the purchase history.',
+      'Past orders can be edited or cancelled; removed orders go to a trash with restore and permanent delete.',
+      'Built without frameworks: HTML, CSS, and vanilla JavaScript.',
     ],
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'XAMPP'],
+    tags: ['HTML', 'CSS', 'JavaScript'],
     images: [
       { src: fhProducts, alt: 'FashionHouse product catalog' },
       { src: fhCart, alt: 'FashionHouse shopping cart' },

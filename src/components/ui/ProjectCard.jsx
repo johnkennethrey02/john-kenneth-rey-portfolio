@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowUpRight, Check, Expand, FlaskConical, Images } from 'lucide-react'
+import { ArrowUpRight, Check, Expand, FlaskConical, Globe, Images } from 'lucide-react'
 import { GitHubIcon } from './BrandIcons'
 import ImageViewer from './ImageViewer'
 
@@ -138,17 +138,29 @@ export default function ProjectCard({ project }) {
           ))}
         </ul>
 
-        {/* Source code button: only shown when the project has a repo link in projects.js */}
-        {links.code && (
-          <div className="mt-auto pt-6">
-            <a
-              href={links.code}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/50 hover:text-white"
-            >
-              <GitHubIcon size={16} /> Source code <ArrowUpRight size={14} aria-hidden="true" />
-            </a>
+        {/* Buttons only appear when the matching link is set in projects.js */}
+        {(links.demo || links.code) && (
+          <div className="mt-auto flex flex-wrap gap-3 pt-6">
+            {links.demo && (
+              <a
+                href={links.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-400"
+              >
+                <Globe size={15} aria-hidden="true" /> Live demo <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            )}
+            {links.code && (
+              <a
+                href={links.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/50 hover:text-white"
+              >
+                <GitHubIcon size={16} /> Source code <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            )}
           </div>
         )}
       </div>
