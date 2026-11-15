@@ -33,6 +33,12 @@ import saAdUsers from '../assets/projects/sysadmin/ad-users.jpg'
 import saPermissions from '../assets/projects/sysadmin/ntfs-permissions.jpg'
 import saPasswordPolicy from '../assets/projects/sysadmin/password-policy.jpg'
 
+import enLogin from '../assets/projects/enrollment/01-login.jpg'
+import enStudent from '../assets/projects/enrollment/02-student.jpg'
+import enSignup from '../assets/projects/enrollment/03-signup.jpg'
+import enAdmin from '../assets/projects/enrollment/04-admin.jpg'
+import enBackup from '../assets/projects/enrollment/05-backup.jpg'
+
 import fhProducts from '../assets/projects/fashionhouse/products.jpg'
 import fhCart from '../assets/projects/fashionhouse/cart.jpg'
 import fhHistory from '../assets/projects/fashionhouse/history.jpg'
@@ -106,6 +112,32 @@ export const projects = [
       { src: saNetAccounts, alt: 'net accounts /domain confirming the password and lockout policy from a workstation' },
       { src: saPermissions, alt: 'NTFS permissions on the department shared folder' },
       { src: saAccessDenied, alt: 'Access denied when an HR user opens the Finance share' },
+    ],
+    links: { code: null },
+  },
+  {
+    id: 'enrollment',
+    title: 'Enrollment System with Scheduling',
+    subtitle: 'C# Desktop Application with MySQL',
+    label: 'Application Development',
+    role: 'Solo Developer',
+    description:
+      'A Windows desktop enrollment system built solo in C# with a MySQL database. Students create an account, wait for admin approval, complete their profile, and enroll in subjects by course, year level, section, and semester. Built as an academic project.',
+    highlights: [
+      'Login and sign-up with admin and user roles, plus an admin approval workflow: approve, reject, switch role, or remove accounts.',
+      'Printable account reports: all, approved, rejected, and pending.',
+      'Deleted accounts are kept in a backup, where they can be restored or permanently deleted.',
+      'Student profile with photo upload and editable, printable personal information.',
+      'Subject enrollment by course, year level, section, and semester, with enrolled subjects shown in a table.',
+      'All database queries are parameterized to guard against SQL injection.',
+    ],
+    tags: ['C#', 'Windows Forms', '.NET Framework', 'MySQL', 'XAMPP'],
+    images: [
+      { src: enLogin, alt: 'Login screen' },
+      { src: enStudent, alt: 'Student form: profile, photo, subject enrollment, and enrolled subjects table' },
+      { src: enSignup, alt: 'Sign-up form with role selection' },
+      { src: enAdmin, alt: 'Admin panel: approve, reject, switch role, remove accounts, and print reports' },
+      { src: enBackup, alt: 'Backup of deleted accounts with restore and delete' },
     ],
     links: { code: null },
   },
