@@ -15,18 +15,18 @@
 
     <link rel="icon" type="image/svg+xml" href="/jkr-icon.svg" />
 
-    <!--
-      Social share preview (Facebook, LinkedIn, Messenger, X).
-      TODO after deploying: replace "/og-image.jpg" with the full URL,
-      e.g. https://your-site.netlify.app/og-image.jpg — some platforms require an absolute link.
-    -->
+    <link rel="canonical" href="https://john-kenneth-rey-portfolio.vercel.app/" />
+
+    <!-- Social share preview (Facebook, LinkedIn, Messenger, X) -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://john-kenneth-rey-portfolio.vercel.app/" />
+    <meta property="og:site_name" content="John Kenneth Rey — Portfolio" />
     <meta property="og:title" content="John Kenneth Rey — Portfolio" />
     <meta
       property="og:description"
       content="IT student focused on technical support, systems administration, and software testing. View my projects, skills, and contact details."
     />
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image" content="https://john-kenneth-rey-portfolio.vercel.app/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="John Kenneth Rey — Web Developer, IT Project Management, Systems Administration" />
@@ -36,7 +36,7 @@
       name="twitter:description"
       content="IT student focused on technical support, systems administration, and software testing."
     />
-    <meta name="twitter:image" content="/og-image.jpg" />
+    <meta name="twitter:image" content="https://john-kenneth-rey-portfolio.vercel.app/og-image.jpg" />
 
     <!-- Helps search engines understand who this page is about -->
     <script type="application/ld+json">
@@ -44,6 +44,8 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "John Kenneth Rey",
+        "url": "https://john-kenneth-rey-portfolio.vercel.app/",
+        "sameAs": ["https://github.com/johnkennethrey02", "https://www.linkedin.com/in/john-kenneth-rey-31681944b"],
         "email": "mailto:johnkennethrey02@gmail.com",
         "jobTitle": "Information Technology Student",
         "address": { "@type": "PostalAddress", "addressRegion": "Bulacan", "addressCountry": "PH" },
